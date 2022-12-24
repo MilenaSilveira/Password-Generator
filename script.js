@@ -13,7 +13,7 @@ function generatePassword(){
   var finalPassword = ""
   var passwordLength = prompt ("How long would you like your password to be? ")
 
-  if (passwordLength <= 8 && passLength >= 128) {
+  if (passwordLength <= 8 && passwordLength >= 128) {
   
      alert ("Please create a password with a length between 8 and 128 characters. ")
      generatePassword();
@@ -48,12 +48,13 @@ if (wantSpecial == false && wantLowerCased == false && wantUpperCased == false &
   alert ("You must choose one type of character for your password")
   generatePassword()
 }
-if (passwordLength >= 8 && passLength <= 128) {
-    for(var i=0; i < passLength; i++) {
+if (passwordLength >= 8 && passwordLength <= 128) {
+    for(var i=0; i < passwordLength; i++) {
       randomPassword = Math.floor(Math.random() * addOptions.length);
       finalPassword += addOptions[randomPassword]
     }
-}
+} 
+
 }
 document.getElementById("password").innerHTML = finalPassword
 
