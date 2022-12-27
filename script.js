@@ -17,6 +17,7 @@ function generatePassword(){
   
      alert ("Please create a password with a length between 8 and 128 characters. ")
      generatePassword();
+     
     }
 
 else{
