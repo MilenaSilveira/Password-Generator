@@ -13,8 +13,8 @@ function generatePassword(){
   var finalPassword = ""
   var passwordLength = prompt ("How long would you like your password to be? ")
 
-  if (passwordLength <= 8 && passwordLength >= 128) {
-  
+  if (passwordLength <= 8 || passwordLength >= 128) {
+    
      alert ("Please create a password with a length between 8 and 128 characters. ")
      generatePassword();
      
@@ -57,18 +57,10 @@ if (passwordLength >= 8 && passwordLength <= 128) {
 } 
 
 }
+// //Write password to the #password input
 document.getElementById("password").innerHTML = finalPassword
 
 }
-//Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
-}
-
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", generatePassword);
